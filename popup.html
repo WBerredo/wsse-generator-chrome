@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>WSSE Generator</title>
+    <link rel="stylesheet" type="text/css" href="style/primer.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body>
@@ -11,15 +12,21 @@ Username: <input type="text" name="username" id="username">
 <br>
 Password: <input type="password" name="password" id="password">
 <br>
-Nonce (<input type="checkbox" name="autononce" id="autononce">automatic): <input type="text" name="nonce" id="nonce">
+Nonce (<input type="checkbox" name="autononce" id="autononce">automatic):
+<input type="text" name="nonce" id="nonce">
 <br>
-Created at (<input type="checkbox" name="autodate" id="autodate">automatic): <input type="text" name="created" id="created">
+Created at (<input type="checkbox" name="autodate" id="autodate">automatic):
+<input type="text" name="created" id="created">
 <br><br>
-<button id="generateBtn">Generate header</button>
+<div id="generate_div">
+    <button id="generateBtn" data-clipboard-target="#result">Generate header</button>
+</div>
 <br><br>
 Result:
 <textarea id="result" rows="11"></textarea>
 
+
+<script src="js/clipboard.js/clipboard.min.js"></script>
 <script src="js/base64.js"></script>
 <script src="js/sha1.js"></script>
 <script src="js/utils.js"></script>
