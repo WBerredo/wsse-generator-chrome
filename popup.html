@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WSSE Generator</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+<h2>WSSE Generator</h2>
+Username: <input type="text" name="username" id="username">
+<br>
+Password: <input type="password" name="password" id="password">
+<br>
+Nonce (<input type="checkbox" name="autononce" id="autononce">automatic): <input type="text" name="nonce" id="nonce">
+<br>
+Created at (<input type="checkbox" name="autodate" id="autodate">automatic): <input type="text" name="created" id="created">
+<br><br>
+<button id="generateBtn">Generate header</button>
+<br><br>
+Result:
+<textarea id="result" rows="11"></textarea>
+
+<script src="js/base64.js"></script>
+<script src="js/sha1.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
