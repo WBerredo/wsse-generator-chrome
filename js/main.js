@@ -10,9 +10,10 @@ var password = document.getElementById('password');
 var created = document.getElementById('created');
 var nonce = document.getElementById('nonce');
 
-var checks = ['autodate', 'autononce'];
+var checks = ['autodate', 'autononce', 'autoMD5'];
 var autodate = document.getElementById('autodate');
 var autononce = document.getElementById('autononce');
+var autoMD5 = document.getElementById('autoMD5');
 
 var result = document.getElementById('result');
 clipResult = new Clipboard('#generateBtn');
@@ -55,7 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         var encodedNonce = base64encode(nonce.value);
-        var passwordDigest = b64_sha1(nonce.value + created.value + password.value);
+
+        var passwordDigest;
+
+        if(autoMD5.checked){
+            passwordDigest = b64_sha1(nonce.value + created.value + toMd5(password.value));
+        }else{
+            passwordDigest = b64_sha1(nonce.value + created.value + password.value);
+        }
+
 
         result.value = "X-WSSE: UsernameToken Username=\""
             + username.value + "\", PasswordDigest=\""
