@@ -2,34 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WSSE Generator</title>
-    <link rel="stylesheet" type="text/css" href="style/primer.css">
+    <title>X-WSSE Generator</title>
+    <link rel="stylesheet" href="style/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body>
-<h2>WSSE Generator</h2>
-Username: <input type="text" name="username" id="username">
-<br>
-Password: <input type="password" name="password" id="password">
-<br>
-Nonce (<input type="checkbox" name="autononce" id="autononce">automatic):
-<input type="text" name="nonce" id="nonce">
-<br>
-Created at (<input type="checkbox" name="autodate" id="autodate">automatic):
-<input type="text" name="created" id="created">
-<br><br>
-<div id="generate_div">
-    <button id="generateBtn" data-clipboard-target="#result">Generate header</button>
+<div class="row">
+    <div class="small-12 columns text-center">
+        <h2>X-WSSE Generator</h2>
+    </div>
+    <div class="small-12 columns">
+        <label for="username"> Username
+            <input type="text" id="username" name="username">
+        </label>
+    </div>
+    <div class="small-8 columns">
+        <label for="password"> Password
+            <input type="password" id="password" name="password">
+        </label>
+    </div>
+    <div class="small-4 columns">
+        <div class="row collapse">
+            <div class="small-12 columns">
+                <label>MD5?</label>
+            </div>
+            <div class="small-12 small-centered switch medium">
+                <input class="switch-input" type="checkbox" id="autoMD5" name="autononce">
+                <label class="switch-paddle" for="autoMD5" id="MD5Label">
+                    <span class="switch-active" aria-hidden="true">On</span>
+                    <span class="switch-inactive" aria-hidden="true">Off</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="small-8 columns">
+        <label for="nonce"> Nonce
+            <input type="text" id="nonce" name="nonce">
+        </label>
+    </div>
+    <div class="small-4 columns">
+        <div class="row collapse">
+            <div class="small-12 columns">
+                <label id="autoLabel">Automatic?</label>
+            </div>
+            <div class="small-12 small-centered switch medium">
+                <input class="switch-input" type="checkbox" id="autononce" name="autononce">
+                <label class="switch-paddle" for="autononce" id="nonceLabel">
+                    <span class="switch-active" aria-hidden="true">Yes</span>
+                    <span class="switch-inactive" aria-hidden="true">No</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="small-8 columns">
+        <label for="created">Created At
+            <input type="text" id="created" name="created">
+        </label>
+    </div>
+    <div class="small-4 columns">
+        <div class="row collapse">
+            <div class="small-12 columns">
+                <label>Automatic?</label>
+            </div>
+            <div class="small-12 small-centered switch medium">
+                <input class="switch-input" type="checkbox" id="autodate" name="autodate">
+                <label class="switch-paddle" for="autodate" id="dateLabel">
+                    <span class="switch-active" aria-hidden="true">Yes</span>
+                    <span class="switch-inactive" aria-hidden="true">No</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="generate_div" class="small-12 columns">
+        <button class="button secondary float-right" id="generateBtn" data-clipboard-target="#result">Generate Header
+        </button>
+    </div>
+    <div class="small-12 columns">
+        <label for="result"> WSSE Header
+            <textarea name="result" id="result" rows="3"></textarea>
+        </label>
+    </div>
 </div>
-<br><br>
-Result:
-<textarea id="result" rows="11"></textarea>
 
 
 <script src="js/clipboard.js/clipboard.min.js"></script>
 <script src="js/base64.js"></script>
 <script src="js/sha1.js"></script>
 <script src="js/utils.js"></script>
+<script src="js/md5.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
