@@ -7,7 +7,6 @@ $ cd wsse-generator-chrome/
 ```
 - Run in terminal:
 ```bash
-$ git checkout firefox_web_extension
 $ zip -r wsse_generator.zip -1 icon/* *
 $ mv wsse_generator.zip wsse_generator.xpi
 ```
