@@ -1,7 +1,7 @@
 # WSSE Generator
 A chrome extension that generates x-wsse headers
 
-## Instalation
+## Installation
 Go to [extension page](https://chrome.google.com/webstore/detail/wsse-generator/piadnaffpgcjalpkfmkpgeamkajfeedc) 
 on Chrome Web Store to download and install the extension.
 
@@ -12,6 +12,9 @@ If you want to download the zipped package from github, just follow these steps.
 - Enable the developer mode at top right.
 - Click `Load unpacked extension...` and select the source code folder.
 - Generate your headers.
+
+## Firefox version
+[Installation](./Install_to_firefox.md)
 
 ## Usage
 To use that generator you just need to:
