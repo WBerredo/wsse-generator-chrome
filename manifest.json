@@ -1,7 +1,12 @@
 {
+  "applications": {
+    "gecko": {
+      "id": "wberredo@gmail.com"
+    }
+  },
   "manifest_version": 2,
   "name": "WSSE Generator",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A WSSE Header Generator",
   "icons": {
     "16": "icon/16.png",
@@ -10,7 +15,6 @@
     "128": "icon/128.png"
   },
   "browser_action": {
-
     "default_title": "WSSE Generator",
     "default_popup": "popup.html"
   }
