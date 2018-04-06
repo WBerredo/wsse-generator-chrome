@@ -1,6 +1,6 @@
 ## Installing on Firefox from Mozilla Add-ons
 
-1. Go to the [extension page](https://addons.mozilla.org/en-US/firefox/addon/wsse-generator/) 
+- Go to the [extension page](https://addons.mozilla.org/en-US/firefox/addon/wsse-generator/)
 on Mozilla Add-ons to download and install the extension.
 
 ### Unpacked extension
